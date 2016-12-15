@@ -13,7 +13,7 @@
     <a class="btn btn-default" href="{% url "person_home" %}">Home</a>
     <a class="btn btn-default" href="{% url "person_list" %}">View Contacts</a>
 
-    <form class="form-horizontal form-inline" method="post">{% csrf_token %}
+    <form class="one" method="post">{% csrf_token %}
     {{ form.as_p }}
     <input style="max-width: 100px" type="submit" value="Submit" id="input-submit"/>
 
