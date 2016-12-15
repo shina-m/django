@@ -1,7 +1,7 @@
 {% load staticfiles %}
 <html>
     <head>
-        <title>Address Book</title>
+        <title>Contact Book</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -17,9 +17,10 @@
             {% endfor %}
         </ul>{% endcomment %}
 
-        <a href="{% url "person_add" %}">Add Contact</a>
 
-        <table class="center">
+
+
+        <table class="center table table-responsive" style="max-width: 650px">
         <thead>
         <tr>
             <th>
@@ -53,7 +54,8 @@
                 </td >
         </tr>
             {% endfor %}
-            </table>
+        <tr><th><a class="btn btn-success"  href="{% url "person_add" %}">Add Contact</a></th></tr>
+    </table>
 
     </body>
 </html>

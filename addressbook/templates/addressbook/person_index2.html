@@ -3,7 +3,7 @@
 {% load staticfiles %}
 <html>
     <head>
-        <title>Address Book</title>
+        <title>Contact Book</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/home2.css' %}">
@@ -11,10 +11,9 @@
     <body>
 
 <div class="wrap">
-
+<a class="btn btn-info" style="margin-left: 30%;" href="{% url "person_list" %}">View Contacts</a>
 		<div class="comp">
-            <a href="{% url "person_list" %}">View Contacts</a>
-            <a href="{% url "person_add" %}">Add Contacts</a>
+
 			<div class="monitor">
 				<div class="mid">
 
@@ -187,6 +186,9 @@
 
 			</div>
 		</div>
+
+
+            <a class="btn btn-success" style="margin-right: 30%;"  href="{% url "person_add" %}">Add Contact</a>
 	</div>
 
     </body>

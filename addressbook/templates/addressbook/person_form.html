@@ -1,7 +1,7 @@
 {% load staticfiles %}
 <html>
     <head>
-        <title>Address Book</title>
+        <title>Contact Book</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -10,12 +10,13 @@
 
     <h1>Contact Form</h1>
 
-    <a href="{% url "person_list" %}">Back</a>
+    <a class="btn btn-default" href="{% url "person_home" %}">Home</a>
+    <a class="btn btn-default" href="{% url "person_list" %}">View Contacts</a>
 
-    <form method="post">{% csrf_token %}
+    <form class="form-horizontal form-inline" method="post">{% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="Submit" id="input-submit"/>
-</form>
+    <input style="max-width: 100px" type="submit" value="Submit" id="input-submit"/>
+
 
 </body>
 </html>

@@ -115,3 +115,13 @@ td, th{
   .errorlist{
       color: #e74c3c;
   }
+
+  label, form input {display: inline-block}
+
+  input {
+    width:70% !important;
+    ;
+  }
+
+  form
+  {text-align: right;}

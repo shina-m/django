@@ -20,10 +20,10 @@ from django.contrib import admin
 from addressbook import views
 
 urlpatterns = [
-    url(r'^$', views.PersonIndex.as_view()),
+    url(r'^$', views.PersonIndex.as_view(), name='person_home'),
     url(r'^admin/', admin.site.urls),
    # url(r'^view/$','spcrud.addressbook.views.list')
-    url(r'^view$', views.PersonList.as_view(), name='person_list'),
+    url(r'^list$', views.PersonList.as_view(), name='person_list'),
     url(r'^add$', views.PersonCreate.as_view(), name='person_add'),
     url(r'^edit/(?P<pk>\d+)$', views.PersonUpdate.as_view(), name='person_edit'),
     url(r'^delete/(?P<pk>\d+)$', views.PersonDelete.as_view(), name='person_delete'),
